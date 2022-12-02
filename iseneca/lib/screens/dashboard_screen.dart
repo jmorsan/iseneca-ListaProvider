@@ -24,19 +24,24 @@ class DashboardScreen extends StatelessWidget {
         ],
       ),
       backgroundColor: Colors.white,
-      body: Column(children: [
-        const SizedBox(height: 30),
-        const Image(
-          image: AssetImage('assets/iseneca_azul.png'),
-          width: double.infinity,
-          height: 150,
-          fit: BoxFit.cover,
-        ),
-        Text(
-          args.toString(),
-          style: const TextStyle(color: AppTheme.primary, fontSize: 30),
-        ),
-      ]),
+      body: Column(
+              children: [
+                
+                Container(
+                  color: Colors.blue,
+                  child: const Image(
+                    image: AssetImage('assets/iseneca .png'),
+                    width: double.infinity,
+                    height: 150,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Text(
+                  args.toString(),
+                  style: const TextStyle(color: AppTheme.primary, fontSize: 30),
+                ),
+              ]
+            ),
     );
   }
 }

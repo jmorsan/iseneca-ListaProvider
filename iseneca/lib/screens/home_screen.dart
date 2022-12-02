@@ -201,11 +201,7 @@ class Login extends StatelessWidget {
                         style: TextStyle(color: AppTheme.primary, fontSize: 30),
                       ),
                     )),
-                onPressed: () => Navigator.pushNamedAndRemoveUntil(
-                    context,
-                    AppRoutes.menuOption[1].route,
-                    arguments: formValues,
-                    (_) => false),
+                onPressed: () => comprobarUsuario(context),
               ),
 
               const SizedBox(height: 70),

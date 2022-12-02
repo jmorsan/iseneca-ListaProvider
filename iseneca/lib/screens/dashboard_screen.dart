@@ -7,7 +7,7 @@ class DashboardScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Map<String,String> args = ModalRoute.of(context)!.settings.arguments as Map<String,String>;
+    final String args = ModalRoute.of(context)!.settings.arguments as String;
 
     return Scaffold(
       appBar: AppBar(
@@ -33,7 +33,7 @@ class DashboardScreen extends StatelessWidget {
           fit: BoxFit.cover,
         ),
         Text(
-          args['usuario'].toString(),
+          args.toString(),
           style: const TextStyle(color: AppTheme.primary, fontSize: 30),
         ),
       ]),

@@ -234,7 +234,7 @@ class Login extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 200),
+              const SizedBox(height: 80),
 
               const Image(
                 image: AssetImage('assets/juntaDeAndalucia.png'),

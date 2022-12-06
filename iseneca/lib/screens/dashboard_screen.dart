@@ -10,38 +10,163 @@ class DashboardScreen extends StatelessWidget {
     final String args = ModalRoute.of(context)!.settings.arguments as String;
 
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
-        backgroundColor: AppTheme.primary,
-        title: const Text("Login"),
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.pushNamedAndRemoveUntil(
-                    context, AppRoutes.menuOption[0].route, (_) => false);
-              },
-              icon: const Icon(Icons.login))
+        backgroundColor: Colors.white,
+        body: Stack(children: const [
+          BackgroundDashboard(),
+          Dashboard(),
+        ]));
+  }
+}
+
+class BackgroundDashboard extends StatelessWidget {
+  const BackgroundDashboard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(children: [
+      Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            stops: [0, 8],
+            colors: [Color(0xff005298), Color(0xff01315a)],
+          ),
+        ),
+        child: const Image(
+          image: AssetImage('assets/iseneca .png'),
+          width: double.infinity,
+          height: 150,
+        ),
+      ),
+      Container(
+        color: Colors.white,
+      ),
+    ]);
+  }
+}
+
+class Dashboard extends StatelessWidget {
+  const Dashboard({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 20,
+      ),
+      child: Column(
+        children: [
+          const SizedBox(height: 125),
+          FloatingCard(),
+          CuadriculaBotones()
         ],
       ),
-      backgroundColor: Colors.white,
-      body: Column(
-              children: [
-                
-                Container(
-                  color: Colors.blue,
-                  child: const Image(
-                    image: AssetImage('assets/iseneca .png'),
-                    width: double.infinity,
-                    height: 150,
-                    fit: BoxFit.cover,
+    );
+  }
+}
+
+class CuadriculaBotones extends StatelessWidget {
+  const CuadriculaBotones({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
+class FloatingCard extends StatelessWidget {
+  const FloatingCard({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(5),
+        color: Colors.white,
+        ),
+      margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      width: double.infinity,
+      height: 150,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                child: Text(
+                  "Joaquin Moreno Sanchez",
+                  style: TextStyle(fontSize: 18,color: Colors.black,fontWeight: FontWeight.w700 ),
+                ),
+                margin: EdgeInsets.only(top: 10, left: 10),
+              ),
+              Container(
+                child: Icon(Icons.people,color: Colors.black,),
+                margin: EdgeInsets.only(top: 10, left: 20),
+              ),
+            ],
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                child: Text("IES Requero",style: TextStyle(color: Colors.blue),),
+                margin: EdgeInsets.only(top: 10, left: 10),
+              ),
+              Container(
+                child: Text("Perfil Dirección",style: TextStyle(color: Colors.blue),),
+                margin: EdgeInsets.only(top: 10, left: 10),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 14,
+          ),
+          Row(
+            children: [
+              Expanded(
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    height:50,
+                    color: Colors.blue,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: const [
+                        Icon(Icons.alarm),
+                        Text("Avisos"),
+                      ],
+                    ),
                   ),
                 ),
-                Text(
-                  args.toString(),
-                  style: const TextStyle(color: AppTheme.primary, fontSize: 30),
+              ),
+              
+              Expanded(
+                child: GestureDetector(
+                  onTap: () {},
+                  child: Container(
+                    height:50,
+                    color: Colors.blue,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: const [
+                        Icon(Icons.alarm),
+                        Text("Bandeja de firmas"),
+                      ],
+                    ),
+                  ),
                 ),
-              ]
-            ),
+              ),
+            ],
+          )
+        ],
+      ),
     );
   }
 }

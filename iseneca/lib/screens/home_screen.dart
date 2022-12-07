@@ -48,22 +48,13 @@ class Login extends StatelessWidget {
 
   void comprobarUsuario(BuildContext context) {
     bool display = true;
-    print('Comprobamos usuario');
+    
 
     final usuarios = usersProvider
         .usersList; //usuariosProvider lo hemos definido como atributo.
 
-    print("${usuarios.length} <- Longitud de la lista");
-    print("${usuarios.toString()} <- toString de la lista");
-
     usuarios.forEach((user) {
-      print("---------------------------------------------------------");
-      print('${formValues['usuario']} Esto es El usuario del mapa');
-      print('${formValues['clave']} Esto es La clave del mapa');
-
-      print('${user.usuario} Esto el es usuario de la lista');
-      print('${user.clave} Esto la contraseña de la lista');
-      print("---------------------------------------------------------");
+      
 
       if (user.usuario == formValues['usuario'] &&
           user.clave == formValues['clave']) {

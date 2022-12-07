@@ -73,7 +73,107 @@ class CuadriculaBotones extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Expanded(
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(5),
+          color: Colors.red,
+          ),
+        margin: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+        child: Column(
+          children: [
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: GestureDetector(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.alarm,color: Colors.blue,),
+                          Text("Alumnado del centro",style: TextStyle(color: Colors.blue),),
+                        ],
+                      ) ,
+                    ),
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.alarm,color: Colors.blue,),
+                          Text("Alumnado del centro",style: TextStyle(color: Colors.blue),),
+                        ],
+                      ) ,
+                    ),
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.alarm,color: Colors.blue,),
+                          Text("Alumnado del centro",style: TextStyle(color: Colors.blue),),
+                        ],
+                      ) ,
+                    ),
+                  ),
+                  
+                ],
+              ),
+            ),
+
+            Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: GestureDetector(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.alarm,color: Colors.blue,),
+                          Text("Alumnado del centro",style: TextStyle(color: Colors.blue),),
+                        ],
+                      ) ,
+                    ),
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.alarm,color: Colors.blue,),
+                          Text("Alumnado del centro",style: TextStyle(color: Colors.blue),),
+                        ],
+                      ) ,
+                    ),
+                  ),
+                  Expanded(
+                    child: GestureDetector(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Icon(Icons.alarm,color: Colors.blue,),
+                          Text("Alumnado del centro",style: TextStyle(color: Colors.blue),),
+                        ],
+                      ) ,
+                    ),
+                  ),
+                  
+                ],
+              ),
+            ),
+            
+          ],
+        ),
+      ),
+    );
   }
 }
 

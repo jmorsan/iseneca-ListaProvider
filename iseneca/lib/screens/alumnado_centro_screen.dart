@@ -1,23 +1,21 @@
-import 'package:iseneca/models/models.dart';
-import 'package:iseneca/themes/app_theme.dart';
-import 'package:iseneca/widgets/widgets.dart';
-import '../routes/app_routes.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:iseneca/models/models.dart';
+import 'package:iseneca/widgets/widgets.dart';
 
-
-class DashboardScreen extends StatelessWidget {
-  const DashboardScreen({Key? key}) : super(key: key);
+class AlumnadoCentroScreen extends StatelessWidget {
+  const AlumnadoCentroScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final User user = ModalRoute.of(context)!.settings.arguments as User;
-
     return Scaffold(
       backgroundColor: Colors.white,
       body: Stack(
         children:  [
           const Background(),
-          Dashboard(user:user),
+          OpcionesAlumnado(user:user),
         ]
       ),
       bottomNavigationBar: BottomNavigationBar(
@@ -53,17 +51,13 @@ class DashboardScreen extends StatelessWidget {
         ],
 
       ),
-
     );
   }
 }
 
-
-
-class Dashboard extends StatelessWidget {
+class OpcionesAlumnado extends StatelessWidget {
   final User user;
-  const Dashboard({super.key, required this.user});
-
+  const OpcionesAlumnado({super.key, required this.user});
 
   @override
   Widget build(BuildContext context) {
@@ -75,15 +69,15 @@ class Dashboard extends StatelessWidget {
         children:  [
           const SizedBox(height: 125),
           ProfileCard(user:user),
-          const CuadriculaBotones()
+          const CuadriculaOpciones()
         ],
       ),
     );
   }
 }
 
-class CuadriculaBotones extends StatelessWidget {
-  const CuadriculaBotones({
+class CuadriculaOpciones extends StatelessWidget {
+  const CuadriculaOpciones({
     Key? key,
   }) : super(key: key);
 
@@ -127,7 +121,7 @@ class CuadriculaBotones extends StatelessWidget {
                               width: 50,
                               ),
                             Text(
-                              "Alumnado del centro",
+                              "Alumnado \n Expulsados",
                             style: TextStyle(color: Colors.black,fontWeight: FontWeight.w700),
                             textAlign: TextAlign.center,
                             ),
@@ -161,112 +155,13 @@ class CuadriculaBotones extends StatelessWidget {
                               height: 50,
                               width: 50,
                               ),
-                            Text("Personal del centro",
+                            Text("Alumnado \n Convivencia",
                             style: TextStyle(color: Colors.black,fontWeight: FontWeight.w700),
                             textAlign: TextAlign.center,
                             ),
                           ],
                         ),
                       ),
-                    ),
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          border: Border(
-                            bottom: BorderSide(
-                            color:Colors.grey,
-                            width: 1.0 
-                            ),
-                          )
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          children: const [
-                            Image(
-                              image: AssetImage("assets/covid.png") ,
-                              height: 50,
-                              width: 50,
-                              ),
-                            Text("Información \n covid",
-                            style: TextStyle(color: Colors.black,fontWeight: FontWeight.w700),
-                            textAlign: TextAlign.center,
-                            ),
-                          ],
-                        ),
-                      ) ,
-                    ),
-                  ),
-                  
-                ],
-              ),
-            ),
-
-            Expanded(
-              child: Row(
-                children: [
-                  Expanded(
-                    child: GestureDetector(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          border: Border(
-                          right: BorderSide(
-                            color:Colors.grey,
-                            width: 1.0 
-                            ),
-                          )
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Image(
-                              image: AssetImage("assets/campana.png") ,
-                              height: 50,
-                              width: 50,
-                              ),
-                            Text(
-                              "Tablón de anuncios",
-                              style: TextStyle(color: Colors.black,fontWeight: FontWeight.w700),
-                              textAlign: TextAlign.center,
-                              ),
-                          ],
-                        ),
-                      ) ,
-                    ),
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      child: Container(
-                        decoration: const BoxDecoration(
-                          color: Colors.white,
-                          border: Border(
-                          right: BorderSide(
-                            color:Colors.grey,
-                            width: 1.0 
-                            ),
-                          )
-                        ),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Image(
-                              image: AssetImage("assets/calendario.png") ,
-                              height: 50,
-                              width: 50,
-                              ),
-                            Text(
-                              "Calendario escolar",
-                              style: TextStyle(color: Colors.black,fontWeight: FontWeight.w700),
-                              textAlign: TextAlign.center,
-                              
-                              ),
-                          ],
-                        ),
-                      ) ,
                     ),
                   ),
                   const Expanded(
@@ -283,5 +178,6 @@ class CuadriculaBotones extends StatelessWidget {
     );
   }
 }
+
 
 

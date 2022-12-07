@@ -11,12 +11,14 @@ class AppRoutes {
         route: 'home',
         icon: Icons.home,
         name: 'Home Screen',
-        screen: const HomeScreen()),
+        screen: const HomeScreen()
+      ),
     MenuOption(
         route: 'menu',
         icon: Icons.home,
         name: 'DashBoard',
-        screen: const DashboardScreen()),
+        screen: const DashboardScreen()
+      ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

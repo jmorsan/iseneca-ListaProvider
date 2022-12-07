@@ -61,7 +61,7 @@ class Login extends StatelessWidget {
         display = false;
 
         Navigator.pushNamed(context, AppRoutes.menuOption[1].route,
-            arguments: formValues['usuario']);
+            arguments: user);
       }
     });
     if (display) {

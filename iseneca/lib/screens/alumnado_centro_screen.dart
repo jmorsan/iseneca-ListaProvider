@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:iseneca/models/models.dart';
+import 'package:iseneca/routes/app_routes.dart';
 import 'package:iseneca/widgets/widgets.dart';
 
 class AlumnadoCentroScreen extends StatelessWidget {
@@ -69,7 +70,7 @@ class OpcionesAlumnado extends StatelessWidget {
         children:  [
           const SizedBox(height: 125),
           ProfileCard(user:user),
-          const CuadriculaOpciones()
+          CuadriculaOpciones(user:user)
         ],
       ),
     );
@@ -77,8 +78,9 @@ class OpcionesAlumnado extends StatelessWidget {
 }
 
 class CuadriculaOpciones extends StatelessWidget {
+  final User user;
   const CuadriculaOpciones({
-    Key? key,
+    Key? key, required  this.user,
   }) : super(key: key);
 
   @override
@@ -97,6 +99,8 @@ class CuadriculaOpciones extends StatelessWidget {
                 children: [
                   Expanded(
                     child: GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, AppRoutes.menuOption[3].route,
+                        arguments: user),
                       child: Container(
                         decoration: const BoxDecoration(
                           color: Colors.white,
@@ -163,11 +167,6 @@ class CuadriculaOpciones extends StatelessWidget {
                         ),
                       ),
                     ),
-                  ),
-                  const Expanded(
-                    child: SizedBox(
-
-                    )   
                   ),
                 ],
               ),

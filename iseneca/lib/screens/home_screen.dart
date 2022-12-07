@@ -42,8 +42,8 @@ class Login extends StatelessWidget {
     required this.usersProvider,
   }) : super(key: key);
 
-  final GlobalKey<FormState> myFormKey;
   final Map<String, String> formValues;
+  final GlobalKey<FormState> myFormKey;
   final UsersProvider usersProvider;
 
   void comprobarUsuario(BuildContext context) {

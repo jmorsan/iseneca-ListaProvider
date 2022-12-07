@@ -75,7 +75,7 @@ class Dashboard extends StatelessWidget {
         children:  [
           const SizedBox(height: 125),
           ProfileCard(user:user),
-          const CuadriculaBotones()
+          CuadriculaBotones(user:user)
         ],
       ),
     );
@@ -83,8 +83,9 @@ class Dashboard extends StatelessWidget {
 }
 
 class CuadriculaBotones extends StatelessWidget {
+  final User user;
   const CuadriculaBotones({
-    Key? key,
+    Key? key, required this.user,
   }) : super(key: key);
 
   @override
@@ -103,6 +104,8 @@ class CuadriculaBotones extends StatelessWidget {
                 children: [
                   Expanded(
                     child: GestureDetector(
+                      onTap:() => Navigator.pushNamed(context, AppRoutes.menuOption[2].route,
+                        arguments: user),
                       child: Container(
                         decoration: const BoxDecoration(
                           color: Colors.white,
@@ -269,11 +272,7 @@ class CuadriculaBotones extends StatelessWidget {
                       ) ,
                     ),
                   ),
-                  const Expanded(
-                    child: SizedBox(
-
-                    )   
-                  ),
+                  Expanded(child: SizedBox()),
                 ],
               ),
             ),

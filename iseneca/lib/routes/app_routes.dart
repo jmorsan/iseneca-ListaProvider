@@ -19,6 +19,18 @@ class AppRoutes {
         name: 'DashBoard',
         screen: const DashboardScreen()
       ),
+    MenuOption(
+        route: 'alumnadocentro',
+        icon: Icons.home,
+        name: 'AlumnadoCentro',
+        screen: const AlumnadoCentroScreen()
+      ),
+    MenuOption(
+        route: 'expulsados',
+        icon: Icons.home,
+        name: 'AlumnosExpulsados',
+        screen: const AlumnosExpulsadosScreen()
+      ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

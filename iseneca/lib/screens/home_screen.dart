@@ -195,7 +195,7 @@ class Login extends StatelessWidget {
                 onPressed: () => comprobarUsuario(context),
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 40),
 
               Container(
                 width: 300,
@@ -225,7 +225,7 @@ class Login extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 150),
 
               const Image(
                 image: AssetImage('assets/juntaDeAndalucia.png'),
@@ -234,11 +234,11 @@ class Login extends StatelessWidget {
                 fit: BoxFit.cover,
               ),
 
-              const SizedBox(height: 20),
+              const SizedBox(height: 10),
 
               const Align(
                 alignment: Alignment.bottomRight,
-                child: Text('v11.3.0', style: TextStyle(color: Colors.white, fontSize: 20))
+                child: Text('v11.3.0', style: TextStyle(color: Colors.white, fontSize: 15,fontWeight: FontWeight.w500))
               ),
             ],
           ),

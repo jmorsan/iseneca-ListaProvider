@@ -111,15 +111,20 @@ class ProfileData extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
+                decoration: const BoxDecoration(
+                          color: Colors.white,
+                          border: Border(
+                            bottom: BorderSide(
+                            color:Color(0xff005298),
+                            width: 1.0 
+                            ),
+                          )
+                        ),
                 margin: const EdgeInsets.only(top: 10, left: 10),
                 child:    const Text(
                   'Perfil',
-                  style: TextStyle(fontSize: 25,color: Colors.black,fontWeight: FontWeight.w700 ),
+                  style: TextStyle(fontSize: 25,color: Color(0xff005298),fontWeight: FontWeight.w700 ),
                 ),
-              ),
-              Container(
-                margin: const EdgeInsets.only(top: 10, left: 20),
-                child: const Icon(Icons.people,color: Colors.black,),
               ),
             ],
           ),
@@ -130,7 +135,7 @@ class ProfileData extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 10, left: 10),
                 child: Row(
                   children: [
-                    const Text('Usuario: ',style:  TextStyle(fontSize: 18,color: Colors.blue,fontWeight: FontWeight.w700)),
+                    const Text('Usuario: ',style:  TextStyle(fontSize: 18,color: Color(0xff005298),fontWeight: FontWeight.w700)),
                     Text(user.usuario,style: const TextStyle(fontSize: 18,color: Colors.black),),
                   ],
                 ),
@@ -139,7 +144,7 @@ class ProfileData extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 10, left: 10),
                 child: Row(
                   children: [
-                    const Text('Nombre: ',style:  TextStyle(fontSize: 18,color: Colors.blue,fontWeight: FontWeight.w700)),
+                    const Text('Nombre: ',style:  TextStyle(fontSize: 18,color: Color(0xff005298),fontWeight: FontWeight.w700)),
                     Text(user.nombreCompleto,style: const TextStyle(fontSize: 18,color: Colors.black),),
                   ],
                 ),
@@ -148,7 +153,7 @@ class ProfileData extends StatelessWidget {
                 margin: const EdgeInsets.only(top: 10, left: 10),
                 child: Row(
                   children: [
-                    const Text('Instituto: ',style:  TextStyle(fontSize: 18,color: Colors.blue,fontWeight: FontWeight.w700)),
+                    const Text('Instituto: ',style:  TextStyle(fontSize: 18,color: Color(0xff005298),fontWeight: FontWeight.w700)),
                     Text(user.instituto,style: const TextStyle(fontSize: 18,color: Colors.black),),
                   ],
                 ),
@@ -161,12 +166,12 @@ class ProfileData extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: GestureDetector(
+                child: ElevatedButton(
                   // ignore: deprecated_member_use
-                  onTap: () =>launch('tel://${user.telefono}'),
+                  onPressed: () =>launch('tel://${user.telefono}'),
                   child: Container(
                     decoration: const BoxDecoration(
-                    color: Colors.blue,
+                    color: Color(0xff005298),
                     border: Border(
                     right: BorderSide(
                       color:Colors.white,
@@ -188,12 +193,12 @@ class ProfileData extends StatelessWidget {
               ),
               
               Expanded(
-                child: GestureDetector(
+                child: ElevatedButton(
                   // ignore: deprecated_member_use
-                  onTap: () =>launch('mailto:${user.mail}'),
+                  onPressed: () =>launch('mailto:${user.mail}'),
                   child: Container(
                     height:50,
-                    color: Colors.blue,
+                    color: Color(0xff005298),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,

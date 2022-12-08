@@ -142,10 +142,6 @@ class CuadriculaOpciones extends StatelessWidget {
                         decoration: const BoxDecoration(
                           color: Colors.white,
                           border: Border(
-                          right: BorderSide(
-                            color:Colors.grey,
-                            width: 1.0 
-                            ),
                             bottom: BorderSide(
                             color:Colors.grey,
                             width: 1.0 

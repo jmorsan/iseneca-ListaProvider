@@ -120,7 +120,7 @@ class UserPersonalCentroItem extends StatelessWidget {
       onTap: () => Navigator.pushNamed(context, AppRoutes.menuOption[6].route,
                         arguments: user),
       child: ListTile(
-        leading: const Icon(Icons.real_estate_agent,color: Colors.blue,),
+        leading: const Icon(Icons.real_estate_agent,color: Color(0xff005298),),
         title:Text(user.nombreCompleto,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w700),) ,
         subtitle: Text('Instituto: ${user.instituto}',style: const TextStyle(color: Colors.black,)),
       ),

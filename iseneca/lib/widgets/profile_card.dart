@@ -39,11 +39,11 @@ class ProfileCard extends StatelessWidget {
             children: [
               Container(
                 margin: const EdgeInsets.only(top: 10, left: 10),
-                child: Text(user.instituto,style: const TextStyle(color: Colors.blue),),
+                child: Text(user.instituto,style: const TextStyle(color: Color(0xff005298)),),
               ),
               Container(
                 margin: const EdgeInsets.only(top: 10, left: 10),
-                child: Text(user.mail,style: TextStyle(color: Colors.blue),),
+                child: Text(user.mail,style: TextStyle(color: Color(0xff005298)),),
               ),
             ],
           ),
@@ -88,7 +88,7 @@ class ProfileCard extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: const [
-                        Icon(Icons.alarm),
+                        Icon(Icons.collections_bookmark),
                         Text("Bandeja de firmas"),
                       ],
                     ),

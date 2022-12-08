@@ -167,7 +167,7 @@ class Login extends StatelessWidget {
               CustomInputField(
                   formProperty: 'usuario',
                   formValues: formValues,
-                  labelText: 'Nombre',
+                  labelText: 'Usuario',
                   hintText: 'Nombre del usuario'
               ),
 
@@ -189,7 +189,7 @@ class Login extends StatelessWidget {
                     child: Center(
                       child: Text(
                         'Entrar',
-                        style: TextStyle(color: AppTheme.primary, fontSize: 30),
+                        style: TextStyle(color: Color(0xff005298), fontSize: 20),
                       ),
                     )),
                 onPressed: () => comprobarUsuario(context),

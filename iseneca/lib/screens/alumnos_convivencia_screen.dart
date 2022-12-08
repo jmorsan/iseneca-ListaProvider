@@ -117,7 +117,7 @@ class UserConvivenciaItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const Icon(Icons.hiking,color: Colors.blue,),
+      leading: const Icon(Icons.hiking,color: Color(0xff005298),),
       title:Text(convivencia.alumno,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w700),) ,
       subtitle: Text('Fecha Inicio: ${convivencia.fechaInicio} \nFecha Fin: ${convivencia.fechaFin}',style: const TextStyle(color: Colors.black,)),
     );

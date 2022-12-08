@@ -119,11 +119,7 @@ class CuadriculaOpciones extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: const [
-                            Image(
-                              image: AssetImage("assets/sombrero.png") ,
-                              height: 50,
-                              width: 50,
-                              ),
+                            Icon(Icons.face_retouching_off,color: Color(0xff005298),size: 50),
                             Text(
                               "Alumnado \n Expulsados",
                             style: TextStyle(color: Colors.black,fontWeight: FontWeight.w700),
@@ -152,11 +148,7 @@ class CuadriculaOpciones extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: const [
-                            Image(
-                              image: AssetImage("assets/profesor.png") ,
-                              height: 50,
-                              width: 50,
-                              ),
+                            Icon(Icons.hiking,color: Color(0xff005298),size: 50),
                             Text("Alumnado \n Convivencia",
                             style: TextStyle(color: Colors.black,fontWeight: FontWeight.w700),
                             textAlign: TextAlign.center,

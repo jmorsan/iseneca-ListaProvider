@@ -12,6 +12,7 @@ class AlumnosConvivenciaScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
     final User user = ModalRoute.of(context)!.settings.arguments as User;
 
     return Scaffold(
@@ -60,12 +61,10 @@ class AlumnosConvivenciaScreen extends StatelessWidget {
   }
 }
 
-
-
 class AlumnosConvivencia extends StatelessWidget {
+
   final User user;
   const AlumnosConvivencia({super.key, required this.user});
-
 
   @override
   Widget build(BuildContext context) {
@@ -83,11 +82,10 @@ class AlumnosConvivencia extends StatelessWidget {
     );
   }
 }
-
 class ListViewAlumnosConvivencia extends StatelessWidget {
+
   final User user;
   const ListViewAlumnosConvivencia({super.key, required this.user});
-
 
   @override
   Widget build(BuildContext context) {
@@ -111,6 +109,7 @@ class ListViewAlumnosConvivencia extends StatelessWidget {
 }
 
 class UserConvivenciaItem extends StatelessWidget {
+
   final Convivencia convivencia;
   const UserConvivenciaItem({super.key, required this.convivencia});
 

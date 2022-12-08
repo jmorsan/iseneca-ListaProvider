@@ -117,7 +117,7 @@ class UserExpulsadosItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: const Icon(Icons.face_retouching_off,color: Color(0xff005298),),
+      leading: const Icon(Icons.face_retouching_off,color: Color(0xff005298)),
       title:Text(expulsado.alumno,style: const TextStyle(color: Colors.black,fontWeight: FontWeight.w700),) ,
       subtitle: Text('Fecha Inicio: ${expulsado.fechaInicio} \nFecha Fin: ${expulsado.fechaFin}',style: const TextStyle(color: Colors.black,)),
     );

@@ -168,7 +168,7 @@ class ProfileData extends StatelessWidget {
               Expanded(
                 child: ElevatedButton(
                   // ignore: deprecated_member_use
-                  onPressed: () =>launch('tel://${user.telefono}'),
+                  onPressed: () =>launch('tel:${user.telefono}'),
                   child: Container(
                     decoration: const BoxDecoration(
                     color: Color(0xff005298),

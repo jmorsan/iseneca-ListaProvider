@@ -154,7 +154,7 @@ class Login extends StatelessWidget {
           key: myFormKey,
           child: Column(
             children: [
-              const SizedBox(height: 100),
+              const SizedBox(height: 50),
               const Image(
                 image: AssetImage('assets/iseneca.png'),
                 width: double.infinity,
@@ -225,7 +225,7 @@ class Login extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 150),
+              const SizedBox(height: 80),
 
               const Image(
                 image: AssetImage('assets/juntaDeAndalucia.png'),

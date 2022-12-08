@@ -31,6 +31,24 @@ class AppRoutes {
         name: 'AlumnosExpulsados',
         screen: const AlumnosExpulsadosScreen()
       ),
+      MenuOption(
+        route: 'convivencia',
+        icon: Icons.home,
+        name: 'AlumnosConvivencia',
+        screen: const AlumnosConvivenciaScreen()
+      ),
+      MenuOption(
+        route: 'personalcentro',
+        icon: Icons.home,
+        name: 'PersonalCentro',
+        screen: const PersonalCentroScreen()
+      ),
+      MenuOption(
+        route: 'perfil',
+        icon: Icons.home,
+        name: 'Perfil',
+        screen: const ProfileScreen()
+      ),
   ];
 
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {

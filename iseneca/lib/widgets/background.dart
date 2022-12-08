@@ -15,7 +15,7 @@ class Background extends StatelessWidget {
           ),
         ),
         child: const Image(
-          image: AssetImage('assets/iseneca .png'),
+          image: AssetImage('assets/iseneca.png'),
           width: double.infinity,
           height: 150,
         ),

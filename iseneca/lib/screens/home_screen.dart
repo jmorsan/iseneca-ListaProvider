@@ -156,13 +156,13 @@ class Login extends StatelessWidget {
             children: [
               const SizedBox(height: 100),
               const Image(
-                image: AssetImage('assets/iseneca .png'),
+                image: AssetImage('assets/iseneca.png'),
                 width: double.infinity,
-                height: 150,
+                height: 95,
                 fit: BoxFit.cover,
               ),
 
-              const SizedBox(height: 30),
+              const SizedBox(height: 15),
 
               CustomInputField(
                   formProperty: 'usuario',
@@ -195,7 +195,7 @@ class Login extends StatelessWidget {
                 onPressed: () => comprobarUsuario(context),
               ),
 
-              const SizedBox(height: 70),
+              const SizedBox(height: 20),
 
               Container(
                 width: 300,
@@ -225,7 +225,7 @@ class Login extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 80),
+              const SizedBox(height: 30),
 
               const Image(
                 image: AssetImage('assets/juntaDeAndalucia.png'),

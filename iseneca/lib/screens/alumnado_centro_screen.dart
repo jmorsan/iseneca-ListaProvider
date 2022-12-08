@@ -136,6 +136,8 @@ class CuadriculaOpciones extends StatelessWidget {
                   ),
                   Expanded(
                     child: GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, AppRoutes.menuOption[4].route,
+                        arguments: user),
                       child: Container(
                         decoration: const BoxDecoration(
                           color: Colors.white,

@@ -141,6 +141,8 @@ class CuadriculaBotones extends StatelessWidget {
                   ),
                   Expanded(
                     child: GestureDetector(
+                      onTap: () => Navigator.pushNamed(context, AppRoutes.menuOption[5].route,
+                        arguments: user),
                       child: Container(
                         decoration: const BoxDecoration(
                           color: Colors.white,
